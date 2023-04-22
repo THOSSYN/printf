@@ -15,4 +15,4 @@ Task-11: Handles the 0 flag char for non-custom conversion specs;
 Task-12: Handles the - flag chas for non-custom conversion specs;
 Task-13: Handles the 'r' conversion specifier;
 Task-14: Handles the 'R' custom conversion specifier;
-Task-15: Tests all custom and non-custom conversion specs together.
+Task-15: Tests all custom and non-custom conversion specs together..
