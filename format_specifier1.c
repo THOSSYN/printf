@@ -4,19 +4,6 @@
 #include<stdlib.h>
 #include<unistd.h>
 #include<limits.h>
-/**
- *len - Finds the length of a string.
- *@str: is the string whose length is determined
- *Return: return the length.
- */
-size_t len(char *str)
-{
-	size_t i;
-
-	for (i = 0; str[i] != '\0';)
-		i++;
-	return (i);
-}
 
 /**
  *_printf - A function that prints formatted output.
