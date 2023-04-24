@@ -9,11 +9,11 @@
  */
 size_t len(char *str)
 {
-        size_t i;
+	size_t i;
 
-        for (i = 0; str[i] != '\0';)
-                i++;
-        return (i);
+	for (i = 0; str[i] != '\0';)
+		i++;
+	return (i);
 }
 
 /**
@@ -24,24 +24,13 @@ size_t len(char *str)
  */
 void int_out(int i)
 {
-        if (i < 0)
-        {
-                _putchar('-');
-                i = -i;
-        }
+	if (i < 0)
+	{
+		_putchar('-');
+		i = -i;
+	}
 
-        if (i / 10)
-                int_out(i / 10);
-        _putchar((i % 10) + '0');
-}
-/**
- * _putchar - Output individual chacters
- * @c: character to be printed
- *
- * Return: returns a character
- */
-
-int _putchar(char c)
-{
-        return (write(1, &c, 1));
+	if (i / 10)
+		int_out(i / 10);
+	_putchar((i % 10) + '0');
 }
