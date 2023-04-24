@@ -8,21 +8,15 @@
 /**
  *_printf - A function that prints formatted output.
  *@format: is the string.
- *
- *
+ *@first_arg: is the variable that traverse the 
+ *optional argument.
  *Return: returns 0.
  */
-int _printf(const char *format, ...)
+void _vprintf(const char *format, va_list first_arg)
 {
-	va_list first_arg;
 	char ch;
 	char *s;
 	int position = 0;
-
-	va_start(first_arg, format);
-
-	if (!(*format))
-		return (0);
 
 	while (*format)
 	{
@@ -53,5 +47,4 @@ int _printf(const char *format, ...)
 			position = 0;
 		} format++;
 	}
-	return (0);
 }
