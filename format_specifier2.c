@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * _printf - Prints to standard output
+ * _vprintf - Prints to standard output
  * @format: string literal containing formats
  *
  * Return: returns zero
@@ -12,6 +12,7 @@
 void _vprintf(const char *format, va_list first_arg)
 {
 	int position = 0, d, i;
+	char sign;
 
 	while (*format)
 	{
@@ -27,12 +28,24 @@ void _vprintf(const char *format, va_list first_arg)
 			{
 				case 'd':{
 						d = va_arg(first_arg, int);
-						int_out(d);
+						sign = '+';
+						if (d < 0)
+						{
+							sign = '-';
+							d = abs(d);
+						}
+						int_out(d, sign, 10);
 						break;
 					}
 				case 'i':{
 						i = va_arg(first_arg, int);
-						int_out(i);
+						sign = '+';
+						if (i < 0)
+						{
+							sign = '-';
+							i = abs(i);
+						}
+						int_out(i, sign, 10);
 						break;
 					}
 				default:
