@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <unistd.h>
+#include "main.h"
 
 /**
  *len - Finds the length of a string.
