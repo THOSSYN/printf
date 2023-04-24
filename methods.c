@@ -22,15 +22,26 @@ size_t len(char *str)
  *
  * Return: prints out integers
  */
-void int_out(int i)
+void int_out(int first_arg, int base)
 {
-	if (i < 0)
+	char buffer[128];
+	int i = 0, rem, num;
+
+	if (first_arg < 0)
 	{
 		_putchar('-');
-		i = -i;
+		num = abs(first_arg);
+	}
+	while(num != 0)
+	{
+		rem = num % base;
+		if (rem < 10)
+			buffer[i++] = '0' + rem;
+		else
+			buffer[i++] = 'A' + rem - 10;
+		num /= base;
 	}
 
-	if (i / 10)
-		int_out(i / 10);
-	_putchar((i % 10) + '0');
+	for (j = i - 1; j >= 0; j--)
+		_putchar(buffer[j]);
 }
