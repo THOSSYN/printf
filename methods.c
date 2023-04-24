@@ -25,7 +25,7 @@ size_t len(char *str)
 void int_out(int first_arg, int base)
 {
 	char buffer[128];
-	int i = 0, rem, num;
+	int i = 0, j, rem, num;
 
 	if (first_arg < 0)
 	{

@@ -7,7 +7,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 size_t len(char *str);
-void int_out(int i);
+void int_out(int first_arg, int base);
 void _vprintf(const char *format, va_list first_arg);
 
 
