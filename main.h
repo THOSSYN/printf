@@ -7,8 +7,8 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 size_t len(char *str);
-void int_out(int first_arg, char sign, int base);
-void _vprintf(const char *format, va_list first_arg);
+int int_out(int first_arg, char sign, int base, char *buffer);
+int _vprintf(const char *format, va_list first_arg);
 
 
 #endif /* MAIN_H */

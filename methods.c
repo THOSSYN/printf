@@ -22,9 +22,8 @@ size_t len(char *str)
  *
  * Return: prints out integers
  */
-void int_out(int first_arg, char sign, int base)
+int int_out(int first_arg, char sign, int base, char *buffer)
 {
-	char buffer[33];
 	int i = 0, j, rem;
 	int num = abs(first_arg);
 
@@ -47,9 +46,12 @@ void int_out(int first_arg, char sign, int base)
 	}
 	else if (sign == '+')
 	{
-		buffer[i++] = '+';
+		buffer[i] = '+';
 	}
+	else if (sign == ' ')
+		buffer[i++] = ' ';
 
 	for (j = i - 1; j >= 0; j--)
 		_putchar(buffer[j]);
+	return(i);
 }

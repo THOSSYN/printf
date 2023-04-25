@@ -9,9 +9,10 @@
  * Return: returns zero
  */
 
-void _vprintf(const char *format, va_list first_arg)
+int _vprintf(const char *format, va_list first_arg)
 {
-	int position = 0, d, i;
+	char buffer[33];
+	int position = 0, d, i, count = 0;
 	char sign;
 
 	while (*format)
@@ -21,7 +22,10 @@ void _vprintf(const char *format, va_list first_arg)
 			if (*format == '%')
 				position = 1;
 			else
+			{
 				_putchar(*format);
+				count++;
+			}
 		} else if (position == 1)
 		{
 			switch (*format)
@@ -34,7 +38,7 @@ void _vprintf(const char *format, va_list first_arg)
 							sign = '-';
 							d = abs(d);
 						}
-						int_out(d, sign, 10);
+						count += int_out(d, sign, 10, buffer);
 						break;
 					}
 				case 'i':{
@@ -45,14 +49,16 @@ void _vprintf(const char *format, va_list first_arg)
 							sign = '-';
 							i = abs(i);
 						}
-						int_out(i, sign, 10);
+						count += int_out(i, sign, 10, buffer);
 						break;
 					}
 				default:
 					 _putchar(*format);
+					 count++;
 			}
 			position = 0;
 		}
 		format++;
 	}
+	return (count);
 }
