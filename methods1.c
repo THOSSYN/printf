@@ -24,7 +24,7 @@ int spec_char(char *c)
 			_putchar('x');
 			if (c[i] < 16)
 				_putchar('0');
-			iTh(c[i]);
+			iTH(c[i]);
 			i++;
 		}
 	}

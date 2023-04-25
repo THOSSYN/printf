@@ -79,7 +79,7 @@ int iTh(unsigned int num)
 			i++;
 		} else
 		{
-			buffer[i] = temp + 55;
+			buffer[i] = temp + 87;
 			i++;
 		}
 		num /= 16;
@@ -113,7 +113,7 @@ int iTH(unsigned int num)
 			i++;
 		} else
 		{
-			buffer[i] = temp + 87;
+			buffer[i] = temp + 55;
 			i++;
 		}
 		num /= 16;

@@ -14,5 +14,6 @@ int iTO(unsigned int num);
 int iTH(unsigned int num);
 int iTh(unsigned int num);
 int spec_char(char *c);
+int _write(void);
 
 #endif /* MAIN_H */

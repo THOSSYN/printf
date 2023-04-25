@@ -4,11 +4,11 @@
 #define BUFFER_SIZE 1024
 
 /**
- * main - This is the entry point of the program
+ * _write - Allows reading and writing to buffer
  *
  * Return: number of characters read by the buffer
  */
-int main(void)
+int _write(void)
 {
 	int j;
 
