@@ -2,19 +2,6 @@
 #include <unistd.h>
 #include "main.h"
 
-/**
- *len - Finds the length of a string.
- *@str: is the string whose length is determined
- *Return: return the length.
- */
-size_t len(char *str)
-{
-	size_t i;
-
-	for (i = 0; str[i] != '\0';)
-		i++;
-	return (i);
-}
 
 /**
  * int_out - prints out integers
@@ -65,8 +52,8 @@ int int_out(int first_arg, char sign, int base, char *buffer)
 int iTh(unsigned int num)
 {
 	char buffer[33];
-	int b, i;
-	unsigned int temp;
+	int b;
+	unsigned int temp, i;
 
 	i = 0;
 	while (num != 0)
@@ -99,8 +86,8 @@ int iTh(unsigned int num)
 int iTH(unsigned int num)
 {
 	char buffer[33];
-	int b, i;
-	unsigned int temp;
+	int b;
+	unsigned int temp, i;
 
 	i = 0;
 	while (num != 0)
@@ -131,8 +118,8 @@ int iTH(unsigned int num)
 int iTO(unsigned int num)
 {
 	char buffer[33];
-	unsigned int rem = 0;
-	int b, i;
+	unsigned int rem = 0, i;
+	int b;
 
 	i = 0;
 	while (num != 0 && i < sizeof(buffer))
@@ -155,8 +142,8 @@ int iTO(unsigned int num)
 int iTB(unsigned int num)
 {
 	char buffer[33];
-	unsigned int rem = 0;
-	int b, i;
+	unsigned int rem = 0, i;
+	int b;
 
 	i = 0;
 	while (num != 0 && i < sizeof(buffer))
