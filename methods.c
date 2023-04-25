@@ -27,7 +27,7 @@ int int_out(int first_arg, char sign, int base, char *buffer)
 	int i = 0, j, rem;
 	int num = abs(first_arg);
 
-	while(num != 0)
+	while (num != 0)
 	{
 		rem = num % base;
 		if (rem < 10)
@@ -53,7 +53,7 @@ int int_out(int first_arg, char sign, int base, char *buffer)
 
 	for (j = i - 1; j >= 0; j--)
 		_putchar(buffer[j]);
-	return(i);
+	return (i);
 }
 
 /**
@@ -65,14 +65,14 @@ int int_out(int first_arg, char sign, int base, char *buffer)
 int iTh(unsigned int num)
 {
 	char buffer[33];
-	int b;
+	int b, i;
 	unsigned int temp;
-	
-	int i = 0;
+
+	i = 0;
 	while (num != 0)
 	{
 		temp = num % 16;
-		
+
 		if (temp < 10)
 		{
 			buffer[i] = temp + 48;
@@ -84,8 +84,8 @@ int iTh(unsigned int num)
 		}
 		num /= 16;
 	}
-	
-	for (b = i - 1; b >=0; b--)
+
+	for (b = i - 1; b >= 0; b--)
 		_putchar(buffer[b]);
 	return (i);
 }
@@ -96,18 +96,17 @@ int iTh(unsigned int num)
  *
  * Return: returns an integer
  */
-int TH(unsigned int num)
+int iTH(unsigned int num)
 {
 	char buffer[33];
-	int b;unsigned int temp;
-	
-	int i = 0;
+	int b, i;
+	unsigned int temp;
+
+	i = 0;
 	while (num != 0)
 	{
-		int rem = 0;
-		
 		temp = num % 16;
-		
+
 		if (temp < 10)
 		{
 			buffer[i] = temp + 48;
@@ -119,7 +118,7 @@ int TH(unsigned int num)
 		}
 		num /= 16;
 	}
-	for (b = i - 1; b >=0; b--)
+	for (b = i - 1; b >= 0; b--)
 		_putchar(buffer[b]);
 	return (i);
 }
@@ -134,7 +133,7 @@ int iTO(unsigned int num)
 	char buffer[33];
 	unsigned int rem = 0;
 	int b, i;
-	
+
 	i = 0;
 	while (num != 0 && i < sizeof(buffer))
 	{
@@ -158,7 +157,7 @@ int iTB(unsigned int num)
 	char buffer[33];
 	unsigned int rem = 0;
 	int b, i;
-	
+
 	i = 0;
 	while (num != 0 && i < sizeof(buffer))
 	{

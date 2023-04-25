@@ -13,5 +13,6 @@ int iTB(unsigned int num);
 int iTO(unsigned int num);
 int iTH(unsigned int num);
 int iTh(unsigned int num);
+int spec_char(char *c);
 
 #endif /* MAIN_H */
