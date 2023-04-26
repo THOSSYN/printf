@@ -5,8 +5,10 @@
 
 /**
  * int_out - prints out integers
- * @i: takes integar
- *
+ * @first_arg: is the integer number
+ *@sign: is the sign
+ *@base: is the base for the conversion.
+ *@buffer: is the array.
  * Return: prints out integers
  */
 int int_out(int first_arg, char sign, int base, char *buffer)
