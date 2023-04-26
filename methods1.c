@@ -28,8 +28,7 @@ int spec_char(char *c)
 			i++;
 		}
 	}
-	c[i] = '\0';
-	return (i);
+	return (i+1);
 }
 /**
  * len - Finds the length of a string.
