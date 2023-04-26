@@ -9,7 +9,7 @@
  */
 int spec_char(char *c)
 {
-	int i;
+	int i, j = 0;
 
 	i = 0;
 	while (c[i] != '\0')
@@ -21,15 +21,19 @@ int spec_char(char *c)
 		} else
 		{
 			_putchar('\\');
+			j++;
 			_putchar('x');
+			j++;
 			if (c[i] < 16)
+			{
 				_putchar('0');
+				j++;
+			}
 			iTH(c[i]);
 			i++;
 		}
 	}
-	c[i + 1] = '\0'
-	return (i + 1);
+	return (i + j);
 }
 /**
  * len - Finds the length of a string.
