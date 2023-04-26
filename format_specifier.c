@@ -54,7 +54,7 @@ int _vprintf(const char *format, va_list first_arg)
 				case 'S':
 				{
 					S = va_arg(first_arg, char *);
-					spec_char(S);
+					count += spec_char(S);
 					break;
 				}
 				case 'd':
