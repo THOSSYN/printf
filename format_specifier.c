@@ -13,7 +13,7 @@
 
 int _vprintf(const char *format, va_list first_arg)
 {
-	char *str;
+	char *str, *S;
 	char sign, ch;
 	char buffer[33];
 	unsigned int hex, Hex, bin, oct; 
@@ -49,6 +49,12 @@ int _vprintf(const char *format, va_list first_arg)
 				{
 					str = va_arg(first_arg, char *);
 					count += write(1, str, len(str));
+					break;
+				}
+				case 'S':
+				{
+					S = va_arg(first_arg, char *);
+					spec_char(S);
 					break;
 				}
 				case 'd':
