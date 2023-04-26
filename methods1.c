@@ -28,6 +28,7 @@ int spec_char(char *c)
 			i++;
 		}
 	}
+	c[i] = '\0';
 	return (i);
 }
 /**
