@@ -14,7 +14,7 @@ int spec_char(char *c)
 	i = 0;
 	while (c[i] != '\0')
 	{
-		if (c[i] >= 32 && c[i] <= 127)
+		if (c[i] > 31)
 		{
 			_putchar(c[i]);
 			i++;
